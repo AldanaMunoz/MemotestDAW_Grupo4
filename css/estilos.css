@@ -100,3 +100,69 @@ body {
 .enlace-externo {
   text-decoration: underline;
 }
+
+.texto-intro {
+  text-align: center;
+}
+
+.campo-formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.etiqueta-campo {
+  font-weight: 600;
+}
+
+.entrada-texto {
+  padding: 0.6rem 0.8rem;
+  border: 2px solid var(--color-cancha-claro);
+  border-radius: 6px;
+  font-size: 1rem;
+  background-color: var(--color-superficie);
+  color: var(--color-texto);
+}
+
+.entrada-textarea {
+  resize: vertical;
+  font-family: var(--fuente-texto);
+}
+
+.campo-nivel {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.opciones-nivel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.opcion-nivel {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.mensaje-error {
+  color: var(--color-error);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.boton-principal {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--color-dorado);
+  color: var(--color-cancha-oscuro);
+  font-weight: 700;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+.boton-principal:hover {
+  background-color: var(--color-dorado-oscuro);
+}

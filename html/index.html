@@ -26,7 +26,35 @@
   <main class="contenido-principal">
     <section id="pantallaInicio" class="pantalla-inicio">
     </section>
+      <p class="texto-intro">Ingresá su nombre, elija el nivel de dificultad y encuentre los pares de banderas del Mundial 2026.</p>
 
+      <div class="campo-formulario">
+        <label for="campoNombre" class="etiqueta-campo">Nombre del jugador</label>
+        <input type="text" id="campoNombre" class="entrada-texto" maxlength="20" placeholder="Ej: Aldana">
+        <p id="errorNombre" class="mensaje-error oculto"></p>
+      </div>
+
+      <fieldset class="campo-formulario campo-nivel">
+        <legend class="etiqueta-campo">Nivel de dificultad</legend>
+        <div class="opciones-nivel">
+          
+          <label class="opcion-nivel">
+            <input type="radio" name="nivel" value="facil">
+            Fácil (4x4)
+          </label>
+          <label class="opcion-nivel">
+            <input type="radio" name="nivel" value="medio">
+            Medio (5x4)
+          </label>
+          <label class="opcion-nivel">
+            <input type="radio" name="nivel" value="dificil">
+            Difícil (6x6)
+          </label>
+        </div>
+        <p id="errorNivel" class="mensaje-error oculto"></p>
+      </fieldset>
+
+      <button type="button" id="botonComenzar" class="boton-principal">Comenzar partida</button>
     <section id="pantallaJuego" class="pantalla-juego oculto">
     </section>
   </main>
