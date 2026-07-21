@@ -1,0 +1,102 @@
+/* ===== Variables de diseno ===== */
+
+:root {
+  --color-cancha-oscuro: #14532d;
+  --color-cancha-claro: #2d6a4f;
+  --color-dorado: #d4af37;
+  --color-dorado-oscuro: #b8932e;
+  --color-error: #e63946;
+  --color-texto-claro: #ffffff;
+
+  --color-fondo: #f4fbf7;
+  --color-texto: #10241a;
+  --color-superficie: #ffffff;
+
+  --fuente-titulos: "Bebas Neue", sans-serif;
+  --fuente-texto: "Work Sans", sans-serif;
+}
+
+/* ===== Base ===== */
+
+body {
+  font-family: var(--fuente-texto);
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+}
+
+.titulo-principal {
+  font-family: var(--fuente-titulos);
+  font-size: 1.75rem;
+  letter-spacing: 0.05em;
+}
+
+.oculto {
+  display: none !important;
+}
+
+/* ===== Encabezado ===== */
+
+.encabezado {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 2rem;
+  background-color: var(--color-cancha-oscuro);
+  color: var(--color-texto-claro);
+}
+
+.navegacion {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.enlace-nav {
+  font-weight: 600;
+  padding-bottom: 0.25rem;
+  border-bottom: 2px solid transparent;
+}
+
+.enlace-nav--activo {
+  border-bottom-color: var(--color-dorado);
+}
+
+.boton-tema {
+  font-size: 1.25rem;
+}
+
+/* ===== Contenido principal ===== */
+
+.contenido-principal {
+  min-height: 70vh;
+  padding: 2rem 1rem;
+}
+
+.pantalla-inicio,
+.pantalla-juego,
+.pantalla-contacto {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ===== Pie de pagina ===== */
+
+.pie-pagina {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: 1.5rem;
+  background-color: var(--color-cancha-oscuro);
+  color: var(--color-texto-claro);
+}
+
+.enlace-externo {
+  text-decoration: underline;
+}
