@@ -166,3 +166,99 @@ body {
 .boton-principal:hover {
   background-color: var(--color-dorado-oscuro);
 }
+
+.panel-estado {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  background-color: var(--color-superficie);
+  padding: 0.75rem 1.25rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.dato-estado {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.tablero {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.6rem;
+}
+
+.carta {
+  width: 80px;
+  height: 80px;
+  perspective: 800px;
+  background: none;
+  padding: 0;
+}
+
+.tablero--medio .carta {
+  width: 68px;
+  height: 68px;
+}
+
+.tablero--dificil .carta {
+  width: 54px;
+  height: 54px;
+}
+
+.carta-interior {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+}
+
+.carta.carta-volteada .carta-interior,
+.carta.carta-encontrada .carta-interior {
+  transform: rotateY(180deg);
+}
+
+.carta-cara {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  backface-visibility: hidden;
+  border-radius: 8px;
+}
+
+.carta-dorso {
+  background-color: var(--color-cancha-claro);
+  font-size: 1.5rem;
+}
+
+.carta-frente {
+  background-color: var(--color-superficie);
+  border: 2px solid var(--color-dorado);
+  transform: rotateY(180deg);
+  gap: 0.15rem;
+}
+
+.carta-bandera {
+  font-size: 1.4rem;
+}
+
+.carta-nombre {
+  font-size: 0.55rem;
+  text-align: center;
+  padding: 0 2px;
+}
+
+.acciones-juego {
+  display: flex;
+  justify-content: center;
+}

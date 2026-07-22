@@ -56,6 +56,15 @@
 
       <button type="button" id="botonComenzar" class="boton-principal">Comenzar partida</button>
     <section id="pantallaJuego" class="pantalla-juego oculto">
+      <div class="panel-estado">
+        <p class="dato-estado">Jugador: <span id="valorJugador"></span></p>
+        <p class="dato-estado">Nivel: <span id="valorNivel"></span></p>
+        <p class="dato-estado">Intentos: <span id="valorIntentos">0</span></p>
+        <p class="dato-estado">Errores: <span id="valorErrores">0</span></p>
+        <p class="dato-estado">Puntaje: <span id="valorPuntaje">0</span></p>
+        <p class="dato-estado">Tiempo: <span id="valorTiempo">00:00</span></p>
+      </div>
+      <div id="tablero" class="tablero"></div>
     </section>
   </main>
 
@@ -66,9 +75,8 @@
 
   <script src="../js/validaciones.js"></script>
   <script src="../js/principal.js"></script>
-  <script src="js/temporizador.js"></script>
-  <script src="js/juego.js"></script>
-  <script src="js/puntaje.js"></script>
+  <script src="../js/datos.js"></script>
+  <script src="../js/tablero.js"></script>
 </body>
 
 </html>
