@@ -341,3 +341,11 @@ body {
   padding: 0.4rem;
   text-align: left;
 }
+
+/* ===== Tema ===== */
+
+[data-tema="oscuro"] {
+  --color-fondo: #0d1b14;
+  --color-texto: #f4fbf7;
+  --color-superficie: #16321f;
+}
