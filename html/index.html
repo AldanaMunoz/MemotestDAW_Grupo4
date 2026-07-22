@@ -81,6 +81,54 @@
           </div>
         </div>
       </div>
+
+      <div class="acciones-juego">
+        <button type="button" id="botonRanking" class="boton-secundario">Ver ranking</button>
+      </div>
+
+      <div id="modalRanking" class="modal oculto">
+        <div class="modal-contenido">
+          <h2 class="modal-titulo">Ranking de partidas</h2>
+          <div class="controles-ranking">
+            <label for="selectorOrden">Ordenar por</label>
+            <select id="selectorOrden">
+              <option value="puntaje">Puntaje</option>
+              <option value="fecha">Fecha</option>
+              <option value="duracion">Duración</option>
+              <option value="nivel">Nivel</option>
+            </select>
+          </div>
+          <table class="tabla-ranking">
+            <thead>
+              <tr>
+                <th>Jugador</th>
+                <th>Nivel</th>
+                <th>Puntaje</th>
+                <th>Intentos</th>
+                <th>Errores</th>
+                <th>Tiempo</th>
+                <th>Fecha</th>
+              </tr>
+            </thead>
+            <tbody id="cuerpoTablaRanking"></tbody>
+          </table>
+          <div class="acciones-modal">
+            <button type="button" id="botonBorrarRanking" class="boton-peligro">Borrar historial</button>
+            <button type="button" id="botonCerrarRanking" class="boton-secundario">Cerrar</button>
+          </div>
+        </div>
+      </div>
+
+      <div id="modalConfirmarBorrado" class="modal oculto">
+        <div class="modal-contenido">
+          <h2 class="modal-titulo">¿Borrar todo el historial?</h2>
+          <p>Esta acción no se puede deshacer.</p>
+          <div class="acciones-modal">
+            <button type="button" id="botonConfirmarBorrado" class="boton-peligro">Sí, borrar</button>
+            <button type="button" id="botonCancelarBorrado" class="boton-secundario">Cancelar</button>
+          </div>
+        </div>
+      </div>
     </section>
   </main>
 
@@ -96,6 +144,7 @@
   <script src="js/temporizador.js"></script>
   <script src="js/juego.js"></script>
   <script src="js/puntaje.js"></script>
+  <script src="js/ranking.js"></script>
 </body>
 
 </html>
