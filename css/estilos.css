@@ -322,3 +322,22 @@ body {
   border-radius: 6px;
   font-weight: 600;
 }
+
+.controles-ranking {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.tabla-ranking {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.85rem;
+}
+
+.tabla-ranking th,
+.tabla-ranking td {
+  border-bottom: 1px solid var(--color-cancha-claro);
+  padding: 0.4rem;
+  text-align: left;
+}
