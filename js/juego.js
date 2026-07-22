@@ -53,3 +53,53 @@ function ocultarCartasNoCoincidentes() {
   segundaCarta = null;
   bloqueoTablero = false;
 }
+
+function verificarFinDePartida() {
+  var totalPares = NIVELES[nivelSeleccionado].pares;
+  if (paresEncontrados === totalPares) {
+    finalizarPartida();
+  }
+}
+
+function finalizarPartida() {
+  detenerTemporizador();
+  var puntajeFinal = calcularPuntajeFinal();
+  var tiempoFormateado = formatearTiempo(segundosTranscurridos);
+  mostrarModalFinal(puntajeFinal, tiempoFormateado);
+  guardarResultadoEnRanking(puntajeFinal, tiempoFormateado);
+}
+
+function mostrarModalFinal(puntajeFinal, tiempoFormateado) {
+  document.getElementById("finalJugador").textContent = nombreJugador;
+  document.getElementById("finalNivel").textContent = traducirNivel(nivelSeleccionado);
+  document.getElementById("finalIntentos").textContent = intentos;
+  document.getElementById("finalErrores").textContent = errores;
+  document.getElementById("finalTiempo").textContent = tiempoFormateado;
+  document.getElementById("finalPuntaje").textContent = puntajeFinal;
+  document.getElementById("modalFinal").classList.remove("oculto");
+}
+
+function reiniciarPartida() {
+  document.getElementById("modalFinal").classList.add("oculto");
+  reiniciarContadores();
+  reiniciarTemporizador();
+  primeraCarta = null;
+  segundaCarta = null;
+  bloqueoTablero = false;
+  generarTablero(nivelSeleccionado);
+}
+
+function volverAPantallaInicio() {
+  document.getElementById("modalFinal").classList.add("oculto");
+  reiniciarContadores();
+  reiniciarTemporizador();
+  document.getElementById("pantallaJuego").classList.add("oculto");
+  document.getElementById("pantallaInicio").classList.remove("oculto");
+}
+
+function inicializarBotonesFinales() {
+  document.getElementById("botonJugarDeNuevo").addEventListener("click", reiniciarPartida);
+  document.getElementById("botonCambiarJugador").addEventListener("click", volverAPantallaInicio);
+}
+
+document.addEventListener("DOMContentLoaded", inicializarBotonesFinales);
