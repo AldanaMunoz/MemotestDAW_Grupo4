@@ -57,7 +57,7 @@ los textos acompanan esta tematica en todo el sitio.
 5. Al completar el tablero se muestra el resultado final y se guarda en el ranking.
 
 ## Link a GitHub Pages
-*Agregar link*
+https://aldanamunoz.github.io/MemotestDAW_Grupo4/html/index.html
 
 ## Integrantes del grupo
 
