@@ -356,3 +356,57 @@ body {
   flex-direction: column;
   gap: 1rem;
 }
+
+@media (max-width: 768px) {
+  .encabezado {
+    padding: 1rem;
+  }
+
+  .panel-estado {
+    gap: 0.6rem;
+  }
+
+  .carta {
+    width: 62px;
+    height: 62px;
+  }
+
+  .tablero--medio .carta {
+    width: 54px;
+    height: 54px;
+  }
+
+  .tablero--dificil .carta {
+    width: 46px;
+    height: 46px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo-principal {
+    font-size: 1.3rem;
+  }
+
+  .navegacion {
+    gap: 0.75rem;
+  }
+
+  .carta {
+    width: 52px;
+    height: 52px;
+  }
+
+  .tablero--medio .carta {
+    width: 46px;
+    height: 46px;
+  }
+
+  .tablero--dificil .carta {
+    width: 36px;
+    height: 36px;
+  }
+
+  .tablero--dificil .carta-nombre {
+    display: none;
+  }
+}
