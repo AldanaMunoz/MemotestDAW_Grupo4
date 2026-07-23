@@ -22,6 +22,10 @@ body {
   font-family: var(--fuente-texto);
   background-color: var(--color-fondo);
   color: var(--color-texto);
+  min-height: 100vh;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
 }
 
 .titulo-principal {
@@ -70,8 +74,14 @@ body {
 /* ===== Contenido principal ===== */
 
 .contenido-principal {
-  min-height: 70vh;
+  flex: 1;
+  width: 100%;
   padding: 2rem 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2rem;
 }
 
 .pantalla-inicio,
@@ -83,6 +93,16 @@ body {
   gap: 1.5rem;
   max-width: 600px;
   margin: 0 auto;
+}
+
+.pantalla-inicio {
+  flex: 0 1 360px;
+}
+
+.pantalla-juego {
+  flex: 1 1 560px;
+  max-width: 860px;
+  width: 100%;
 }
 
 /* ===== Pie de pagina ===== */
@@ -184,28 +204,31 @@ body {
 }
 
 .tablero {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  --columnas-tablero: 4;
+  --tamano-carta: 80px;
+  display: grid;
+  grid-template-columns: repeat(var(--columnas-tablero), var(--tamano-carta));
   gap: 0.6rem;
+  justify-content: center;
+  max-width: 100%;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.tablero--medio {
+  --columnas-tablero: 5;
+}
+
+.tablero--dificil {
+  --columnas-tablero: 9;
 }
 
 .carta {
-  width: 80px;
-  height: 80px;
+  width: var(--tamano-carta);
+  aspect-ratio: 1;
   perspective: 800px;
   background: none;
   padding: 0;
-}
-
-.tablero--medio .carta {
-  width: 68px;
-  height: 68px;
-}
-
-.tablero--dificil .carta {
-  width: 54px;
-  height: 54px;
 }
 
 .carta-interior {
@@ -253,9 +276,12 @@ body {
 }
 
 .carta-nombre {
-  font-size: 0.55rem;
+  font-size: 0.65rem;
   text-align: center;
-  padding: 0 2px;
+  max-width: 100%;
+  padding: 0 4px;
+  line-height: 1.1;
+  overflow-wrap: break-word;
 }
 
 .acciones-juego {
@@ -366,19 +392,17 @@ body {
     gap: 0.6rem;
   }
 
-  .carta {
-    width: 62px;
-    height: 62px;
+  .tablero {
+    --tamano-carta: min(80px, calc((100vw - 3.8rem) / 4));
   }
 
-  .tablero--medio .carta {
-    width: 54px;
-    height: 54px;
+  .tablero--medio {
+    --tamano-carta: min(80px, calc((100vw - 4.4rem) / 5));
   }
 
-  .tablero--dificil .carta {
-    width: 46px;
-    height: 46px;
+  .tablero--dificil {
+    --columnas-tablero: 6;
+    --tamano-carta: min(80px, calc((100vw - 5rem) / 6));
   }
 }
 
@@ -389,21 +413,6 @@ body {
 
   .navegacion {
     gap: 0.75rem;
-  }
-
-  .carta {
-    width: 52px;
-    height: 52px;
-  }
-
-  .tablero--medio .carta {
-    width: 46px;
-    height: 46px;
-  }
-
-  .tablero--dificil .carta {
-    width: 36px;
-    height: 36px;
   }
 
   .tablero--dificil .carta-nombre {

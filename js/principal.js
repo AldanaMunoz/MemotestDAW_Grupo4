@@ -33,7 +33,6 @@ function iniciarPartida() {
   if (nombreValido && nivelValido) {
     nombreJugador = nombre.trim();
     nivelSeleccionado = nivel;
-    document.getElementById("pantallaInicio").classList.add("oculto");
     document.getElementById("pantallaJuego").classList.remove("oculto");
     document.getElementById("valorJugador").textContent = nombreJugador;
     document.getElementById("valorNivel").textContent = traducirNivel(nivelSeleccionado);
