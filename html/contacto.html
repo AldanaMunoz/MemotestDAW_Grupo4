@@ -22,6 +22,29 @@
 
   <main class="contenido-principal">
     <section id="pantallaContacto" class="pantalla-contacto">
+      <p class="texto-intro">¿Encontraste un error o querés dejarnos un comentario? Escribinos.</p>
+
+      <form id="formularioContacto" class="formulario-contacto" novalidate>
+        <div class="campo-formulario">
+          <label for="campoNombreContacto" class="etiqueta-campo">Nombre</label>
+          <input type="text" id="campoNombreContacto" class="entrada-texto">
+          <p id="errorNombreContacto" class="mensaje-error oculto"></p>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="campoMail" class="etiqueta-campo">Mail</label>
+          <input type="email" id="campoMail" class="entrada-texto">
+          <p id="errorMail" class="mensaje-error oculto"></p>
+        </div>
+
+        <div class="campo-formulario">
+          <label for="campoMensaje" class="etiqueta-campo">Mensaje</label>
+          <textarea id="campoMensaje" class="entrada-texto entrada-textarea" rows="4"></textarea>
+          <p id="errorMensaje" class="mensaje-error oculto"></p>
+        </div>
+
+        <button type="submit" class="boton-principal">Enviar mensaje</button>
+      </form>
     </section>
   </main>
 
@@ -31,5 +54,7 @@
   </footer>
 
   <script src="js/tema.js"></script>
+  <script src="js/validaciones.js"></script>
+  <script src="js/contacto.js"></script>
 </body>
 </html>
