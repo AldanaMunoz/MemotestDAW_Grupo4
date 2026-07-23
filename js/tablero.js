@@ -53,8 +53,7 @@ function crearCarta(seleccion) {
   frente.className = "carta-cara carta-frente";
 
   var bandera = document.createElement("span");
-  bandera.className = "carta-bandera";
-  bandera.textContent = seleccion.bandera;
+  bandera.className = "carta-bandera fi fi-" + seleccion.codigo;
 
   var nombre = document.createElement("span");
   nombre.className = "carta-nombre";

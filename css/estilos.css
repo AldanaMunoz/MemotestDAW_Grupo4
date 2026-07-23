@@ -272,7 +272,10 @@ body {
 }
 
 .carta-bandera {
-  font-size: 1.4rem;
+  width: 2.2rem;
+  height: 1.6rem;
+  border-radius: 2px;
+  box-shadow: 0 0 0 1px rgba(16, 36, 26, 0.15);
 }
 
 .carta-nombre {
@@ -415,7 +418,7 @@ body {
     gap: 0.75rem;
   }
 
-  .tablero--dificil .carta-nombre {
+  .carta-nombre {
     display: none;
   }
 }
