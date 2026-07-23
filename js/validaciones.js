@@ -22,3 +22,16 @@ function ocultarError(idError) {
   elementoError.textContent = "";
   elementoError.classList.add("oculto");
 }
+
+function validarNombreContacto(valor) {
+  return esAlfanumerico(valor) && valor.trim().length > 0;
+}
+
+function validarMail(valor) {
+  var patron = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return patron.test(valor.trim());
+}
+
+function validarMensaje(valor) {
+  return valor.trim().length > 5;
+}
